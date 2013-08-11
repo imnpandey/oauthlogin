@@ -40,12 +40,12 @@
 			elseif(strlen($client->access_token))
 			{
 				$success = $client->CallAPI(
-					'https://api.twitter.com/1/account/verify_credentials.json',
+					'https://api.twitter.com/1.1/account/verify_credentials.json',
 					'GET', array(), array('FailOnAccessError'=>true), $user);
 					printdata($user,"me twit");
 					
 					$success = $client->CallAPI(
-					'https://api.twitter.com/1/statuses/followers/kayalshri.json',
+					'https://api.twitter.com/1.1/statuses/followers/kayalshri.json',
 					'GET', array(), array('FailOnAccessError'=>true), $user);
 					printdata($user,"Twit Friends");
 						
